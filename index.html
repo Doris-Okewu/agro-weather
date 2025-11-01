@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroWeather by Doris</title>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+ 
+  
+  <script type="module" crossorigin src="/assets/index-000a0982.js"></script>
+  <link rel="stylesheet" href="/assets/index-cc4774fe.css">
+</head>
+<body>
+  <div class="container">
+  <header class="header">
+    <h1>AgroWeather</h1>
+    <button id="theme-toggle">Dark Mode</button>
+  </header>
+
+  <!-- Search Section -->
+  <section class="search-section">
+    <input type="text" id="city-input" placeholder="Enter city or farm location" autofocus>
+    <button id="search-btn">Search</button>
+    <button id="geo-btn">My Location</button>
+  </section>
+
+  <!-- Add Crop Section -->
+  <div class="add-crop">
+    <label for="crop">Crop:</label>
+    <select id="crop">
+      <option value="maize">Maize</option>
+      <option value="rice">Rice</option>
+      <option value="cassava">Cassava</option>
+      <option value="tomato">Tomato</option>
+      <option value="yam">Yam</option>
+    </select>
+    <button id="add-crop-btn">+ Add Your Crop</button>
+    <input type="text" id="new-crop-input" placeholder="e.g., Okra" style="display:none; margin-left:0.5rem;">
+  </div>
+
+  <!-- Loading -->
+  <div id="loading" class="loading hidden">Loading...</div>
+
+  <!-- Error -->
+  <div id="error" class="error hidden"></div>
+
+  <!-- Current Weather Card -->
+  <section class="current-weather card hidden">
+    <h2 id="city-name">City Name</h2>
+    <div class="weather-info">
+      <div class="temp-icon">
+        <img id="weather-icon" src="" alt="">
+        <p id="temperature">--°C</p>
+      </div>
+      <p id="description">--</p>
+      <p id="humidity">Humidity: --%</p>
+      <p id="wind">Wind: -- m/s</p>
+      <p id="sunrise">Sunrise: --</p>
+      <p id="sunset">Sunset: --</p>
+    </div>
+  </section>
+
+  <!-- Agriculture Tips -->
+  <section class="agri-tips card hidden">
+    <h3>Farming Tip of the Day</h3>
+    <p id="tip">--</p>
+  </section>
+
+  <!-- 5-Day Forecast -->
+  <section class="forecast card hidden">
+    <h3>5-Day Forecast</h3>
+    <div id="forecast-cards" class="forecast-cards"></div>
+  </section>
+
+  <footer>
+    <p>Data by <a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a> | © 2025 Doris Okewu</p>
+  </footer>
+  </div>
+</body>
+</html>
